@@ -3,10 +3,11 @@
 const initialState = {
     jokeData: [],
     isFetchingData: false,
-    error: ''
+    error: '',
+    displayAnswer: false
 };
 
-export const jokerReducer = (state=initialState, action) => {
+export const triviaReducer = (state=initialState, action) => {
     switch (action.type) {
 
 
