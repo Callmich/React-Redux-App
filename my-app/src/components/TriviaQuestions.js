@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Col, Card, CardText, CardTitle, Button } from 'reactstrap';
+import { answerQuestion } from '../actions/triviaActions'
 
 const TriviaQuestions = props => {
     return (
@@ -13,7 +14,7 @@ const TriviaQuestions = props => {
                                 <div>
                                 {props.displayAnswer ? (<CardText > {question.correct_answer}</CardText>) : (<div>Click Below for the answer</div>)}
                                 </div>
-                                <Button>Answer</Button>
+                                <Button onClick={() => props.answerQuestion(props.question)} >Answer</Button>
                             </Card>
                         </Col>)
                     )}
@@ -24,7 +25,8 @@ const TriviaQuestions = props => {
 const mapStateToProps = state => {
     return {
         triviaData: state.triviaData,
-        error: state.error
+        error: state.error,
+        displayAnswer: state.displayAnswer
     }
 }
-export default connect( mapStateToProps, {} )(TriviaQuestions)
+export default connect( mapStateToProps, { answerQuestion} )(TriviaQuestions)
