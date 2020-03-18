@@ -1,7 +1,7 @@
-import { FETCH_DATA } from '../actions/triviaActions'
+import { FETCH_DATA, UPDATE_TRIVIA, SET_ERROR } from '../actions/triviaActions'
 
 const initialState = {
-    jokeData: [],
+    triviaData: [],
     isFetchingData: false,
     error: '',
     displayAnswer: false
@@ -13,8 +13,20 @@ export const triviaReducer = (state=initialState, action) => {
             return {
                 ...state,
                 isFetchingData: true,
-                jokeData: [],
+                triviaData: [],
                 displayAnswer: false
+            };
+        case UPDATE_TRIVIA:
+            return {
+                ...state,
+                triviaData: action.payload,
+                isFetchingData: false
+            };
+        case SET_ERROR:
+            return {
+                ...state,
+                isFetchingData: false,
+                error: action.payload
             }
 
         default:
