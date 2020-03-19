@@ -8,7 +8,7 @@ export const ANSWER_QUESTION = 'ANSWER_QUESTION';
 export const getData = () => dispatch => {
     dispatch({ type: FETCH_DATA });
     axios
-        .get(`https://opentdb.com/api.php?amount=1`)
+        .get(`https://opentdb.com/api.php?amount=10`)
         .then(response => {
             console.log("Axios Call",response.data.results)
             dispatch({ type: UPDATE_TRIVIA, payload: response.data.results})
