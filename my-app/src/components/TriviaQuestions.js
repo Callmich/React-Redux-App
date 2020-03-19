@@ -21,7 +21,6 @@ const mapStateToProps = state => {
     return {
         triviaData: state.triviaData,
         error: state.error,
-        displayAnswer: state.displayAnswer
     }
 }
 export default connect( mapStateToProps, {} )(TriviaQuestions)
