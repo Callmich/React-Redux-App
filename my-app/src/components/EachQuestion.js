@@ -10,13 +10,13 @@ const EachQuestion = props => {
     return (
 
         <div>
-            <Col sm="6">
+            <Col sm="6" className="card">
                 <Card body>
-                    <CardTitle> Question: {props.question.question} </CardTitle>
+                    <CardTitle className='question'> Question: {props.question.question} </CardTitle>
                     <div>
-                    {answer ? (<CardText > {props.question.correct_answer}</CardText>) : (<div>Click Below for the answer</div>)}
+                    {answer ? (<CardText className='answ'> {props.question.correct_answer}</CardText>) : (<div>Click Below for the answer</div>)}
                     </div>
-                    <Button onClick={() => setAnswer(true)} >Answer</Button>
+                    <Button className="butt" onClick={() => setAnswer(true)} >Answer</Button>
                 </Card>
             </Col>
         </div>

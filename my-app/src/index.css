@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+div.error{
+  color: red
+}
+
+.center{
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+.card{
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+}
+
+.butt{
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 2%;
+}
+
+.question{
+  font-weight: bold;
+}
+
+.answ{
+  font-size: 2rem;
+}
+

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { getData } from "../actions/triviaActions"
+import {  Button } from 'reactstrap';
 
 
 const TriviaForm = props => {
@@ -13,9 +14,9 @@ const TriviaForm = props => {
 
 
     return (
-      <div>
+      <div >
           {props.isFetchingData ? (<div>I swear I left those trivia questions somewhere</div>): (
-          <button onClick={handleGetData}>Find some Questions</button>)}
+          <Button onClick={handleGetData}>Find some Questions</Button>)}
       </div>
     )
 }
