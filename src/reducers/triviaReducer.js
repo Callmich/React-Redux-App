@@ -4,7 +4,6 @@ const initialState = {
     triviaData: [],
     isFetchingData: false,
     error: '',
-    displayAnswer: false
 };
 
 export const triviaReducer = (state=initialState, action) => {
@@ -14,7 +13,7 @@ export const triviaReducer = (state=initialState, action) => {
                 ...state,
                 isFetchingData: true,
                 triviaData: [],
-                displayAnswer: false
+                
             };
         case UPDATE_TRIVIA:
             return {
